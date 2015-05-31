@@ -5,7 +5,7 @@
 #'split a series of timestamps (or a series of series) associated with UUIDs, into sessions
 #'
 #'@description
-#'\code{sessionise} splits timestamps associated with user events into "sessions",
+#'\code{reconstruct_sessions} splits timestamps associated with user events into "sessions",
 #'enabling the simple calculation of various metrics such as session length or the number of events
 #'within a session.
 #'
@@ -28,17 +28,17 @@
 #'data("session_dataset")
 #'session_dataset$timestamp <- to_seconds(x = session_dataset$timestamp, format = "%Y%m%d%H%M%S")
 #'events_by_user <- split(session_dataset$timestamp, session_dataset$UUID)
-#'sessions <- sessionise(events_by_user)
+#'sessions <- reconstruct_sessions(events_by_user)
 #'@export
-sessionise <- function(timestamps, threshold = 3600L) {
-    .Call('reconstructr_sessionise', PACKAGE = 'reconstructr', timestamps, threshold)
+reconstruct_sessions <- function(timestamps, threshold = 3600L) {
+    .Call('reconstructr_reconstruct_sessions', PACKAGE = 'reconstructr', timestamps, threshold)
 }
 
 #'@title
 #'Counts the length of each session within a set
 #'
 #'@description
-#'\code{session_length} takes a list of sessions (generated via \code{\link{sessionise}})
+#'\code{session_length} takes a list of sessions (generated via \code{\link{reconstruct_sessions}})
 #'and calculates the approximate length (in seconds) of each session. See the "session metrics"
 #'vignette for more details.
 #'
@@ -46,7 +46,7 @@ sessionise <- function(timestamps, threshold = 3600L) {
 #'unless \code{single_page_sessions} is set to true. Instead, it returns the numeric value -1
 #'for those sessions.
 #'
-#'@param sessions a list of sessions, extracted via \code{\link{sessionise}}
+#'@param sessions a list of sessions, extracted via \code{\link{reconstruct_sessions}}
 #'
 #'@param padding_value the time to use for padding the session length, to accomodate the time spent idling
 #'on the last event in the session or (in the case of one-event sessions) the only event in the session.
@@ -61,13 +61,13 @@ sessionise <- function(timestamps, threshold = 3600L) {
 #'(or not. See the \code{single_page_sessions} parameter).
 #' 
 #'@seealso
-#'\code{\link{sessionise}}, for generating sessions, \code{\link{session_events}} for
+#'\code{\link{reconstruct_sessions}}, for generating sessions, \code{\link{session_events}} for
 #'simply counting the number of events in each session, and \code{\link{bounce_rate}} for calculating
 #'the bounce rate of the session set overall.
 #'
 #'@examples
 #'\dontrun{
-#'#With a sessionised dataset (see ?sessionise for an example)
+#'#With a sessionised dataset (see ?reconstruct_sessions for an example)
 #'lengths <- session_length(sessions = sessions, padding_value = 200, preserve_single_events = TRUE)
 #'}
 #'@export
@@ -78,17 +78,17 @@ session_length <- function(sessions, padding_value = 430L, preserve_single_event
 #'@title count the number of events in a session (or set of sessions)
 #'@description 
 #'\code{session_events} counts the number of events in a session, or in multiple
-#'sessions, based on a provided "sessions" list (which can be generated via \code{\link{sessionise}})).
+#'sessions, based on a provided "sessions" list (which can be generated via \code{\link{reconstruct_sessions}})).
 #'
-#'@param sessions a list of sessions generated via \code{\link{sessionise}}
+#'@param sessions a list of sessions generated via \code{\link{reconstruct_sessions}}
 #'
-#'@seealso \code{\link{sessionise}} for generating sessions, \code{\link{session_length}}
+#'@seealso \code{\link{reconstruct_sessions}} for generating sessions, \code{\link{session_length}}
 #'for session length, and \code{\link{bounce_rate}} for the bounce rate represented by a set
 #'of sessions.
 #'
 #'@examples
 #'\dontrun{
-#'#With a sessionised dataset (see ?sessionise for an example)
+#'#With a sessionised dataset (see ?reconstruct_sessions for an example)
 #'event_counts <- session_events(sessions)
 #'}
 #'@export
