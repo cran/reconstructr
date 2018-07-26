@@ -1,4 +1,11 @@
-Version 2.0.0 [WIP]
+Version 2.0.2
+* Minor Makevars tweak for CRAN compliance
+
+Version 2.0.1
+-------------------------------------------------------------------------
+* Documentation updates and function registration.
+
+Version 2.0.0
 -------------------------------------------------------------------------
 
 * Complete rebuild. See the vignette.
