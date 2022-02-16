@@ -107,7 +107,7 @@ time_on_page <- function(sessions, by_session = FALSE, median = FALSE,
     return(round(func(sessions$time_delta, na.rm = TRUE), digits = precision))
   }
   
-  output <- stats::aggregate(formula = time_delta ~ session_id, data = sessions,
+  output <- stats::aggregate(x = time_delta ~ session_id, data = sessions,
                              FUN = func, na.action = NULL, na.rm = TRUE)
   output$time_delta <- round(output$time_delta, digits = precision)
   names(output)[names(output) == "time_delta"] <- "time_on_page"
@@ -143,7 +143,7 @@ time_on_page <- function(sessions, by_session = FALSE, median = FALSE,
 #'@export
 session_length <- function(sessions){
   
-  output <- stats::aggregate(formula = time_delta ~ session_id, data = sessions,
+  output <- stats::aggregate(x = time_delta ~ session_id, data = sessions,
                              FUN = sum, na.action = NULL, na.rm = TRUE)
   names(output)[names(output) == "time_delta"] <- "session_length"
   return(output)

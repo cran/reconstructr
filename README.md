@@ -1,10 +1,10 @@
 ## Session reconstruction and analysis in R
 
-__Author:__ Oliver Keyes<br/>
-__License:__ [MIT](http://opensource.org/licenses/MIT)<br/>
+__Author:__ Os Keyes<br/>
+__License:__ [MIT](https://opensource.org/licenses/MIT)<br/>
 __Status:__ Stable
 
-[![Travis-CI Build Status](https://travis-ci.org/Ironholds/reconstructr.svg?branch=master)](https://travis-ci.org/Ironholds/reconstructr) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/reconstructr)](https://cran.r-project.org/package=reconstructr) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/reconstructr)
+[![Travis-CI Build Status](https://travis-ci.org/Ironholds/reconstructr.svg?branch=master)](https://travis-ci.org/Ironholds/reconstructr) [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/reconstructr)](https://cran.r-project.org/package=reconstructr) ![downloads](http://cranlogs.r-pkg.org/badges/grand-total/reconstructr)
 
 ### Description
 
