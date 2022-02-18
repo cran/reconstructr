@@ -1,9 +1,9 @@
-cbafd25544892c410d0f16a90ffb1ba8 *DESCRIPTION
+5d0d95aadeed03812fefa6c11c44a782 *DESCRIPTION
 1d9678dbfe1732b5d2c521e07b2ceef0 *LICENSE
 fb776de031c7a995cd354c63fcc6d8ef *NAMESPACE
-e34921dfb01ea8c3f80e69ec3041af63 *NEWS
+95c5fc51bd69184fb295143ad22f50ba *NEWS
 1a0052f775560bb4605734d00e580cb3 *R/RcppExports.R
-da6124ac1fdcb7cb182327574665f773 *R/metrics.R
+442f51669ccb53f80c43507ef0fa1686 *R/metrics.R
 34e7bfb02e0d85397914e1abe6609b3d *R/reconstructr.R
 432007f9714c9e699fe4249a9dafe1a7 *R/session_dataset.R
 06b70249d2ca6194a013b72c54e056ae *R/sessionise.R
@@ -12,7 +12,7 @@ da6124ac1fdcb7cb182327574665f773 *R/metrics.R
 01b7afda525699dbdadaca13e42d4e69 *data/session_dataset.rda
 662f9c08549b4ba319827d1ad4cbcb01 *inst/doc/Introduction.R
 7292a9ca72697deb020be47681db7610 *inst/doc/Introduction.Rmd
-625946561be70facf4b6a644523c7440 *inst/doc/Introduction.html
+7eecbd46777795b2f8e8b4f6b4cb4ef2 *inst/doc/Introduction.html
 f97da89eced7c6d497f51873c41ddbc0 *man/bounce_rate.Rd
 142fe519da6328cd01bf0de87ce78760 *man/reconstructr.Rd
 79caf0046b423e83935cc60c169df311 *man/session_count.Rd

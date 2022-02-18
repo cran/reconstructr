@@ -1,8 +1,8 @@
 Package: reconstructr
 Type: Package
 Title: Session Reconstruction and Analysis
-Version: 2.0.3
-Date: 2022-02-12
+Version: 2.0.4
+Date: 2022-02-17
 Author: Os Keyes
 Maintainer: Os Keyes <ironholds@gmail.com>
 Description: Functions to reconstruct sessions from web log or other user trace data
@@ -20,6 +20,6 @@ BugReports: https://github.com/Ironholds/reconstructr/issues
 RoxygenNote: 7.1.2
 Depends: R (>= 3.3.0)
 NeedsCompilation: yes
-Packaged: 2022-02-15 16:40:44 UTC; ironholds
+Packaged: 2022-02-17 18:25:35 UTC; ironholds
 Repository: CRAN
-Date/Publication: 2022-02-16 07:50:12 UTC
+Date/Publication: 2022-02-18 08:30:02 UTC
